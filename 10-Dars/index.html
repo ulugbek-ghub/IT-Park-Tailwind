@@ -1,13 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @custom-variant dark (&:where(.dark, .dark *));
+    </style>
 </head>
-<body>
-    
+
+<body class="bg-gray-100 dark:bg-gray-600">
+
+    <nav class="bg-white shadow-xl dark:bg-gray-700">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="text-xl font-bold text-blue-500 dark:text-white">
+                My website
+            </div>
+            <div class="dark:text-white">
+                <a class="px-8" href="#">Home</a>
+                <a class="px-8" href="#">About</a>
+                <a class="px-8" href="#">Contact</a>
+            </div>
+            <button 
+            onclick="document.documentElement.classList.toggle('dark')"
+
+
+            class="py-2 px-4 text-white rounded-xl bg-blue-500 dark:bg-gray-500 dark:hover:bg-gray-900 dark:hover:cursor-pointer">Dark White</button>
+        </div>
+    </nav>
+
+    <section class="text-center py-6 dark:text-white">
+        <h2 class="font-bold mb-6 text-4xl ">Hello W0rld</h2>
+        <p class="">
+            Lorem ipsum dolor sit amet consectetur adipisicing.
+        </p>
+        <p class="pt-8">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates qui voluptatum aspernatur cumque, distinctio veritatis eum laboriosam dolorum facere excepturi?
+        </p>
+        
+    </section>
+
 </body>
+
 </html>
